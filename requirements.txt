@@ -1,4 +1,4 @@
-altgraph==0.16.3
+altgraph==0.17.1
 asgiref==3.8.0
 distlib==0.3.8
 Django==4.2.11
