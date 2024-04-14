@@ -23,14 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-hl-&^%#m79w7x3@zvv)8je3e!cmv3d5%%up-4&e5&9im!1^t^_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000', 'message-project-lbqr.onrender.com']
 
 CORS_ALLOWED_ORIGINS = [
 'http://localhost:3000',
-'http://localhost:3000',
-'http://localhost:8000'
+'https://message-me-not.vercel.app/'
 
 
     # Add other allowed domains here when you deploy
