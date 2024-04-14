@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-hl-&^%#m79w7x3@zvv)8je3e!cmv3d5%%up-4&e5&9im!1^t^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000', 'message-project-lbqr.onrender.com']
 
 CORS_ALLOWED_ORIGINS = [
 'http://localhost:3000',
