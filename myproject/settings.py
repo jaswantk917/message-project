@@ -20,20 +20,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = ''
+SECRET_KEY = 'django-insecure-hl-&^%#m79w7x3@zvv)8je3e!cmv3d5%%up-4&e5&9im!1^t^_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000']
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://192.168.0.101:3000',
-    'http://localhost:3000',
+'http://localhost:3000',
+'http://localhost:3000',
+'http://localhost:8000'
+
+
     # Add other allowed domains here when you deploy
 ]
-
+CORS_ORIGIN_WHITELIST = [ 'http://localhost:3000', 'http://localhost:3000' , 'http://localhost:8000']
 
 # Application definition
 
@@ -49,11 +51,11 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'django.middleware.security.SecurityMiddleware',
+    'django.middleware.security.SecurityMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -139,4 +141,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 EMAIL_HOST_USER = 'jaswantk917@yahoo.com'
-EMAIL_HOST_PASSWORD = ''
+EMAIL_HOST_PASSWORD = 'lygrmphsvvxpkjio'
