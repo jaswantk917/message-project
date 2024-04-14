@@ -35,7 +35,7 @@ CORS_ALLOWED_ORIGINS = [
 
     # Add other allowed domains here when you deploy
 ]
-CORS_ORIGIN_WHITELIST = [ 'http://localhost:3000', 'http://localhost:3000' , 'http://localhost:8000']
+CORS_ORIGIN_WHITELIST = [ 'http://localhost:3000', 'https://message-me-not.vercel.app/']
 
 # Application definition
 
@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    # 'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
