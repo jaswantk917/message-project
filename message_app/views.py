@@ -22,7 +22,7 @@ def index(request):
 
 
 def submit_message(request):
-    
+
 
     if request.method == 'POST':
         print(request.body, flush=True)
@@ -43,17 +43,23 @@ def submit_message(request):
                 # dont sent 200 status code
                 return JsonResponse({'success': False, 'error': str(e)})
 
-        else: 
+        else:
             try:
                 send_message_email(message, contact_info)
                 return JsonResponse({'success': True})
             except Exception as e:
                 print(str(e), flush=True)
                 return JsonResponse({'success': False, 'error': str(e)})
-    
+
     elif request.method == 'GET':
-        return JsonResponse({'csrfToken': csrf.get_token(request)
-})
+        csrf_token = request.COOKIES.get('csrftoken')
+        if csrf_token:
+            response = HttpResponse(csrf_token)
+            response['Access-Control-Allow-Origin'] = 'https://message-me-not.vercel.app'
+            response['Access-Control-Allow-Credentials'] = 'true'
+            return response
+        else:
+            return HttpResponse(status=400)
     else:
         return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
