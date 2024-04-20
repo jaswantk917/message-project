@@ -25,6 +25,8 @@ SECRET_KEY = 'django-insecure-hl-&^%#m79w7x3@zvv)8je3e!cmv3d5%%up-4&e5&9im!1^t^_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+CORS_ALLOW_CREDENTIALS = True
+
 CSRF_TRUSTED_ORIGINS = [
     'https://message-me-not.vercel.app',
 ]
