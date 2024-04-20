@@ -35,7 +35,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000', 'message-project-lb
 
 CORS_ALLOWED_ORIGINS = [
 'http://localhost:3000',
-'https://message-me-not.vercel.app/'
+'https://message-me-not.vercel.app'
 
 
     # Add other allowed domains here when you deploy
