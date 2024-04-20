@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-hl-&^%#m79w7x3@zvv)8je3e!cmv3d5%%up-4&e5&9im!1^t^_
 DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://message-me-not.vercel.app/',
+    'https://message-me-not.vercel.app',
 ]
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:3000', 'message-project-lbqr.onrender.com']
