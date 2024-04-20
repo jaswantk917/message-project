@@ -59,7 +59,7 @@ def submit_message(request):
             response['Access-Control-Allow-Credentials'] = 'true'
             return response
         else:
-            return HttpResponse(status=400)
+            return HttpResponse(status=400, content=b'No CSRF token found')
     else:
         return JsonResponse({'success': False, 'error': 'Invalid request method'})
 
